@@ -1,4 +1,7 @@
-﻿namespace FormsBlazor
+﻿using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
+
+namespace FormsBlazor
 {
     partial class Form1
     {
@@ -45,6 +48,9 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             //WindowState = FormWindowState.Maximized;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.CenterScreen;
+
             ClientSize = new Size(1000, 600);
             Controls.Add(blazorWebView1);
             Name = "Form1";

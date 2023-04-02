@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components.WebView.WindowsForms;
 using Microsoft.Extensions.DependencyInjection;
+using System.Windows.Forms;
 
 namespace FormsBlazor;
 
@@ -14,7 +15,5 @@ public partial class Form1 : Form
         blazorWebView1.HostPage = "wwwroot\\index.html";
         blazorWebView1.Services = services.BuildServiceProvider();
         blazorWebView1.RootComponents.Add<Main>("#app");
-
-
     }
 }
