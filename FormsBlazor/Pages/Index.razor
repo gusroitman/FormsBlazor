@@ -1,0 +1,58 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+
+  <div>
+    <div class="header bg-primary text-white p-3">
+      <h1>Blazor inside WinForms .NET 7</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-3 bg-light sidebar p-3">
+        <h2>Menu</h2>
+        <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="javascript: void(0);" @onclick="@(() => SelectMenu("Home"))" @onclick:preventDefault>Home</a>
+            <a class="nav-link" href="javascript: void(0);" @onclick="@(() => SelectMenu("Contador"))" @onclick:preventDefault>Contador</a>
+            <a class="nav-link" href="javascript: void(0);" @onclick="@(() => SelectMenu("Table"))" @onclick:preventDefault>Tabla</a>
+            <a class="nav-link" href="javascript: void(0);" @onclick="@(() => SelectMenu("Conversor"))" @onclick:preventDefault>Conversor Moneda</a>
+        </nav>
+      </div>
+      <div class="col-md-9 main-content-1 p-3 w-75">
+        @if (selectedMenu == "Home")
+        {
+            <Home />   
+        }
+        else if (selectedMenu == "Contador")
+        {
+            <Counter /> 
+        }
+        else if (selectedMenu == "Conversor")
+        {
+            <Conversor />
+        }
+        else if (selectedMenu == "Table")
+        {
+            <Table />
+        }
+            
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+@code {
+    private string selectedMenu = "Home";
+
+    private void SelectMenu(string menu)
+    {
+        selectedMenu = menu;
+    }
+
+    private async Task OnClick(MouseEventArgs e)
+    {
+
+    }
+}
