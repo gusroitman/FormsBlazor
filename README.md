@@ -3,4 +3,4 @@
 ![Blazor](https://img.shields.io/badge/blazor-%235C2D91.svg?logo=blazor&logoColor=white)
 ### Hello! I´m Gustavo :wave: 
 
-### I made some Dashboard layouts examples using Blazor and Syncfusion library. 
+### This is an example of using Blazor inside Winforms. 
